@@ -1,0 +1,76 @@
+
+Adding image: NDEed-tiny-editor
+  * Save image into tree; make sure scaled appropriately
+  * Right click... insert image; select Source.
+  * Add appropriate description
+  * Set first dimension to e.g.  50%; leave second dimension blank
+    and leave "constrain properties" checked.
+  * Can use formatting position on toolbar to center or flow around-left,
+    or flow-around right
+
+Adding figure: NDEed-tiny-editor
+  * Save image into tree; make sure scaled appropriately
+  * Right click... insert image; select Source.
+  * Set dimensions both blank;
+  * Add description if not redundant with caption
+  * Check "caption"; close dialog
+  * From "Headings...Figure" select one size percentage and
+    one of centered, float left, float right.
+    *** Be warned: these are toggles. you MUST turn off
+        all but one positioning toggle and all but one
+	sizing toggle. Selected toggles are indicated with
+        a vertical bar in the menu ***
+
+Adding sidebar: NDEed-tiny-editor
+  * press <return> to create a blank paragraph then use
+    Formats... Create sidebar to turn the paragraph into
+    an "ASIDE"
+  * Then select exactly one of:
+       Formats...Sidebars...aside.left or
+       Formats...Sidebars...aisde.right
+    and exactly one of:
+       Formats...Sidebars...aside.szXXpct
+    *** Be warned: these are toggles. You MUST turn off
+    all but one positioning toggle and all but one
+    sizing toggle. Selected toggles are indicated with
+    a vertical bar in the menu ***
+  * The aside can have its own set of paragraphs and headers;
+    also images/figures.
+    
+
+Adding an educational objective section:
+  * Create a new paragraph (press return) under the main heading (h1)
+  * Select Formats..Educational objective
+  * Type title, then select Formats..Headings..H3
+  * New line; select bulleted list; enter objectives
+
+Adding a review section: NDEed-tiny-editor
+  * Create a new paragraph (press return) under the main heading (h1)
+  * Select Formats..Review
+  * Type title, then select Formats..Headings..H3
+  * New line; select numbered list; enter objectives
+
+Adding inline math:
+  * Go to http://www.mathjax.org. Click on "try a live demo"
+  * Enter equation into box in LaTeX format surrounded by "$" signs.
+  * Right click on rendered equation.. make sure Math Settings...
+    Add original as annothation is checked
+  * Right click on rendered equation.. Show math as.. MathML code..
+    copy to clipboard
+  * In NDEed-tiny-editor go to code view (<> icon), find where the
+    math should go, and paste. It will show in LaTeX format in the
+    editor, but as rendered math in browsers
+
+Adding block math: NDEed-tiny-editor
+  * Two returns to create an empty block
+  * Formats... DisplayMath (will now show as centered)
+  * Go to http://www.mathjax.org. Click on "try a live demo"
+  * Enter equation into box in LaTeX format surrounded by double "$$" signs.
+  * Right click on rendered equation.. make sure Math Settings...
+    Add original as annothation is checked
+  * Right click on rendered equation.. Show math as.. MathML code..
+    copy to clipboard
+  * In NDEed-tiny-editor go to code view (<> icon), find the
+  <div class="displaymath"> where math should go, and paste.
+    It will show in LaTeX format in the
+    editor, but as rendered math in browsers

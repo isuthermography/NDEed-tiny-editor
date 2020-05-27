@@ -1,0 +1,11 @@
+--- node_modules/tinymce/plugins/importcss/plugin.js.orig	2020-05-26 13:44:48.127129645 -0500
++++ node_modules/tinymce/plugins/importcss/plugin.js	2020-05-26 16:24:49.933560600 -0500
+@@ -121,7 +121,7 @@
+       var classes = selector[2].substr(1).split('.').join(' ');
+       var inlineSelectorElements = global$4.makeMap('a,img');
+       if (selector[1]) {
+-        format = { title: selectorText };
++          format = { title: selectorText, selector: selectorText.split(".")[0], ceFalseOverride: true };
+         if (editor.schema.getTextBlockElements()[elementName]) {
+           format.block = elementName;
+         } else if (editor.schema.getBlockElements()[elementName] || inlineSelectorElements[elementName.toLowerCase()]) {
