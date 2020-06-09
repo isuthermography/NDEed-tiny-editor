@@ -16,13 +16,6 @@ figure {
     margin-bottom: 0;
 }
 
-figure.image { /* override tinymce internal presentation */
-    display: block;
-    border: 0px;
-    margin-top: 0;
-    margin-bottom: 0;
-    background: none;
-}
 
 figure.centered {
     margin: auto;
@@ -132,6 +125,7 @@ figure img {
 figure figcaption {
     margin: 6px 8px 6px 8px;
     text-align: center;
+    font-weight: bold;
 }
 
 figure.image figcaption {
@@ -191,6 +185,14 @@ div.nde-ed-review {
 
 
 iframe.nde-ed-swiffyframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+iframe.nde-ed-jsframe {
     position: absolute;
     width: 100%;
     height: 100%;
