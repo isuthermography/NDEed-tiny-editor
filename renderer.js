@@ -227,7 +227,7 @@ tinymce.init({
 <?xml-stylesheet type="text/xsl" href="topic.xsl"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>What is Electricity?</title>
+<title>Enter Page Title Here</title>
 <!-- <meta name="keywords" content=""/> --> <!-- keywords separated by commas and spaces -->
 <!-- <meta name="description" content=""/> -->
 <!-- <meta name="author" content=""/>  -->
