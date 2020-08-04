@@ -14,7 +14,7 @@ Adding figure: NDEed-tiny-editor
   * Set dimensions both blank;
   * Add description if not redundant with caption
   * Check "caption"; close dialog
-  * From "Headings...Figure" select one size percentage and
+  * From toolbar "Formats...Figure" select one size percentage and
     one of centered, float left, float right.
     *** Be warned: these are toggles. you MUST turn off
         all but one positioning toggle and all but one
