@@ -17,8 +17,13 @@ on Linux, to install systemwide: `sudo npm install -g electron --unsafe-perm=tru
 Can then run from central path with `electron <this_directory> [ file_to_open.html ]`
 
 
-# To build installable packages:
+# To build binary ZIP files:
 sudo npm install electron-packager -g
 electron-packager . NDEed-TinyEditor --platform=linux --arch=x64 --overwrite
 electron-packager . NDEed-TinyEditor --platform=darwin --arch=x64 --overwrite
 electron-packager . NDEed-TinyEditor --platform=win32 --arch=x64 --overwrite
+
+To install, download the binary ZIP file and unpack it in a suitable location.
+You can run the editor by running the "NDEed-TinyEditor" or
+"NDEed-TinyEditor.exe" binary inside the archive. You can also create a
+shortcut to this binary.
