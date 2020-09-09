@@ -7,6 +7,8 @@ const tinymce = require("tinymce")
 const fs = require('fs')
 const path = require('path')
 const beautify = require('js-beautify').html;
+const url_module=require('url');
+const relateURL = require('relateurl');
 
 let menu
 let filename
@@ -42,9 +44,13 @@ function saveas() {
     else {
       console.log("Save dialog returned");
       console.log(n);
-      change_working_directory(path.dirname(n.filePath));
-      filename = path.basename(n.filePath); 
-      save();
+	change_working_directory(path.dirname(n.filePath));
+	var filepath = n.filePath;
+	if (path.extname(filepath)=="") {
+	    filepath = filepath+".xhtml";
+	}
+        filename = path.basename(filepath); 
+	save();
     }
   });
 }
@@ -129,6 +135,11 @@ tinymce.PluginManager.add('menusave', function(editor, url) {
         //shortcut: 'Ctrl+a',
         onclick: function() {app.quit()}
     });
+    editor.addMenuItem('menudevtools', {
+	text: 'Toggle Debug',
+	context: 'file',
+	onclick: function() { require('electron').remote.getCurrentWindow().toggleDevTools(); }
+    });
 });
 
 tinymce.baseURL = "node_modules/tinymce";
@@ -136,6 +147,7 @@ tinymce.baseURL = "node_modules/tinymce";
 tinymce.init({ 
   selector:'div.tinymce-full',
   height: "100%",
+  convert_urls: false, // URL conversion fails completely on Windows
   indent: true,
     theme: 'modern',
     valid_elements: "+*[*]", // allow all elements and attributes
@@ -193,9 +205,28 @@ tinymce.init({
       filters: [{name: 'Images', extensions: ['jpg', 'png', 'gif', 'svg']}],
       defaultPath: working_directory
     }).then((fn) => {
+      console.log("file_picker_callback.then(): fn=");
+      console.log(fn);
+      console.log("\n");
       if (fn.canceled) return;
       var filename = path.basename(fn.filePaths[0]);
-      var rel_filename = path.relative(working_directory || "", fn.filePaths[0]);
+	
+      //var rel_filename = path.relative(working_directory || "", fn.filePaths[0]);
+      var base = url_module.pathToFileURL(working_directory || ".").toString();
+      if (!base.endsWith("/")) {
+        base=base+"/";
+      }
+      var dest = url_module.pathToFileURL(fn.filePaths[0]).toString();
+      console.log(base);
+      console.log(dest);
+	
+      rel_filename = relateURL.relate(base,dest,{output: relateURL.PATH_RELATIVE,schemeRelative: false,slashesDenoteHost: false});
+      console.log("rel_filename=");	
+      console.log(rel_filename);	
+      console.log("\n");
+      console.log("title=");	
+      console.log(filename);	
+      console.log("\n");
       cb(rel_filename, { title: filename});
     });
   },

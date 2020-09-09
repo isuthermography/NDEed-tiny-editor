@@ -15,12 +15,14 @@
   "license": "CC0-1.0",
   "dependencies": {
     "tinymce": "^4.5.3",
-    "js-beautify": "^1.6.8"
+    "js-beautify": "^1.6.8",
+    "relateurl": "^0.2.7"
   },
   "devDependencies": {
     "dist": "^0.1.2",
-    "electron": "^1.4.1",
-    "electron-builder": "^13.3.2",
+    "electron": "^9.2.1",
+    "electron-builder": "^22.8.1",
+    "electron-packager": "^15.1.0",
     "js-beautify": "^1.6.8",
     "tinymce": "^4.5.3"
   },
@@ -29,8 +31,7 @@
     "mac": {
       "category": "html editor"
     },
-    "win": {
-    },
+    "win": {},
     "asar": true
   },
   "scripts": {

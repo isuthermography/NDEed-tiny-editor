@@ -17,3 +17,8 @@ on Linux, to install systemwide: `sudo npm install -g electron --unsafe-perm=tru
 Can then run from central path with `electron <this_directory> [ file_to_open.html ]`
 
 
+# To build installable packages:
+sudo npm install electron-packager -g
+electron-packager . NDEed-TinyEditor --platform=linux --arch=x64 --overwrite
+electron-packager . NDEed-TinyEditor --platform=darwin --arch=x64 --overwrite
+electron-packager . NDEed-TinyEditor --platform=win32 --arch=x64 --overwrite

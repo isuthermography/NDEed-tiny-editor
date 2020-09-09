@@ -15,7 +15,7 @@ let mainWindow, menu
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 1000, height: 800, webPreferences: {nodeIntegration: true} })
+    mainWindow = new BrowserWindow({width: 1000, height: 800, webPreferences: {nodeIntegration: true, enableRemoteModule: true, worldSafeExecuteJavaScript: true} })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
