@@ -23,6 +23,16 @@ electron-packager . NDEed-TinyEditor --platform=linux --arch=x64 --overwrite
 electron-packager . NDEed-TinyEditor --platform=darwin --arch=x64 --overwrite
 electron-packager . NDEed-TinyEditor --platform=win32 --arch=x64 --overwrite
 
+export VERSION=1.1.1
+
+cp README.md NDEed-TinyEditor-darwin-x64/
+cp README.md NDEed-TinyEditor-linux-x64/
+cp README.md NDEed-TinyEditor-win32-x64/
+zip -r NDEed-TinyEditor-$VERSION-win32-x64.zip NDEed-TinyEditor-win32-x64
+zip -r NDEed-TinyEditor-$VERSION-linux-x64.zip NDEed-TinyEditor-linux-x64/
+zip -r NDEed-TinyEditor-$VERSION-darwin-x64-macos.zip NDEed-TinyEditor-darwin-x64/
+
+
 To install, download the binary ZIP file and unpack it in a suitable location.
 You can run the editor by running the "NDEed-TinyEditor" or
 "NDEed-TinyEditor.exe" binary inside the archive. You can also create a
