@@ -19,9 +19,9 @@ Can then run from central path with `electron <this_directory> [ file_to_open.ht
 
 # To build binary ZIP files:
 sudo npm install electron-packager -g
-electron-packager . NDEed-TinyEditor --platform=linux --arch=x64 --overwrite
-electron-packager . NDEed-TinyEditor --platform=darwin --arch=x64 --overwrite
-electron-packager . NDEed-TinyEditor --platform=win32 --arch=x64 --overwrite
+electron-packager . NDEed-TinyEditor --platform=linux --ignore="packaged_archives" --arch=x64 --overwrite
+electron-packager . NDEed-TinyEditor --platform=darwin --ignore="packaged_archives" --arch=x64 --overwrite
+electron-packager . NDEed-TinyEditor --platform=win32 --ignore="packaged_archives" --arch=x64 --overwrite
 
 export VERSION=1.1.1
 
