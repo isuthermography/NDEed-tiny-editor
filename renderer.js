@@ -255,7 +255,7 @@ tinymce.init({
 	  } else {
 	      // initialize with blank document 
 	      editor.setContent(`<?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="topic.xsl"?>
+<?xml-stylesheet type="text/xsl" href="layout.xsl"?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <title>Enter Page Title Here</title>
