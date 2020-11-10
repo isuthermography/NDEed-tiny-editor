@@ -28,9 +28,9 @@ export VERSION=1.1.1
 cp README.md NDEed-TinyEditor-darwin-x64/
 cp README.md NDEed-TinyEditor-linux-x64/
 cp README.md NDEed-TinyEditor-win32-x64/
-zip -r NDEed-TinyEditor-$VERSION-win32-x64.zip NDEed-TinyEditor-win32-x64
-zip -r NDEed-TinyEditor-$VERSION-linux-x64.zip NDEed-TinyEditor-linux-x64/
-zip -r NDEed-TinyEditor-$VERSION-darwin-x64-macos.zip NDEed-TinyEditor-darwin-x64/
+zip -r packaged_archives/NDEed-TinyEditor-$VERSION-win32-x64.zip NDEed-TinyEditor-win32-x64/
+zip -r packaged_archives/NDEed-TinyEditor-$VERSION-linux-x64.zip NDEed-TinyEditor-linux-x64/
+zip -r packaged_archives/NDEed-TinyEditor-$VERSION-darwin-x64-macos.zip NDEed-TinyEditor-darwin-x64/
 
 
 To install, download the binary ZIP file and unpack it in a suitable location.
